@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,12 @@ public class BankAccountService {
     }
 
     public BankAccount fetchBankAccountByCode(String code) {
+
+        if (!NumberUtils.isParsable(code)){
+            return null;
+        }
+
+
         Optional<BankAccount> bankAccount = bankAccountRepository.findById(Long.parseLong(code));
         if (bankAccount.isPresent()) {
             return bankAccount.get();
