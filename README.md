@@ -20,9 +20,13 @@ Scenario Principale:
 - Il sistema aggiorna il saldo del conto effettuando il versamento
 - L’utente accede ad uno schermo (conferma.jsp) nel quale vengono riassunti i risultati dell’operazione
 (dati del conto ed importo versato); lo schermo contiene un collegamento allo schermo iniziale nel caso
-l’utente voglia eseguire una ulteriore operazione Scenario alternativo: Il conto corrente non esiste
+l’utente voglia eseguire una ulteriore operazione
+
+**Scenario alternativo: Il conto corrente non esiste**
+
 - Se, viceversa, il conto corrente non esiste, l’utente accede ad uno schermo (errore.jsp) in cui viene
-visualizzato un messaggio di errore ed un collegamento allo schermo principale per effettuare una nuova operazione
+visualizzato un messaggio di errore ed un collegamento allo schermo principale per effettuare una nuova operazione.
+
 Scrivere l’applicazione Web che effettua le operazioni elencate sopra secondo le seguenti specifiche:
 - L’applicazione deve utilizzare pagine JSP e un’architettura di tipo Modello 1.
 - La grafica deve essere organizzata utilizzando un foglio di stile CSS.
