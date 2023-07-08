@@ -20,4 +20,9 @@ public class BankAccountController {
     public String getConfirmView(){
         return "confirm";
     }
+
+    @GetMapping("/error")
+    public String getErrorView(){
+        return "error";
+    }
 }
