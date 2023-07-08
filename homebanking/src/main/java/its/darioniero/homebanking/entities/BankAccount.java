@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Entity
 @Data
 @Builder
@@ -18,4 +20,13 @@ public class BankAccount {
     @Id
     @Column(name = "bank_account_code")
     private Long bankAccountCode;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "surname")
+    private String surname;
+
+    @Column(name = "balance")
+    private BigDecimal balance;
 }
