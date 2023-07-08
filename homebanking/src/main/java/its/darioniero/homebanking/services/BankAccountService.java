@@ -32,4 +32,12 @@ public class BankAccountService {
         return null;
 
     }
+
+    public BankAccount fetchBankAccountByCode(String code) {
+        Optional<BankAccount> bankAccount = bankAccountRepository.findById(Long.parseLong(code));
+        if (bankAccount.isPresent()) {
+            return bankAccount.get();
+        }
+        return null;
+    }
 }
