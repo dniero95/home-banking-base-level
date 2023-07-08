@@ -7,7 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class BankAccountController {
 
     @GetMapping
-    public String getIndex(){
+    public String getIndexView(){
         return "index";
+    }
+
+    @GetMapping("/deposit")
+    public String getDepositView(){
+        return "deposit";
+    }
+
+    @GetMapping("/confirm")
+    public String getConfirmView(){
+        return "confirm";
     }
 }
