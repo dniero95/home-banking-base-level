@@ -25,6 +25,17 @@
       </p>
       <p>Saldo Attuale: <span th:text="${bankAccount.balance}"></span></p>
     </div>
+    <div class="container">
+      <h2>Versamento</h2>
+      <form th:action="@{/confirm}" method="get">
+        <label for="code">Codice conto:</label>
+        <input type="text" name="code" id="code" th:value="${bankAccount.bankAccountCode}" disabled>
+        <label for="amount">Importo:</label>
+        <input type="number" name="amount" id="amount" />                                                                                                               min="0">
+        <button type="submit" class="btn btn-primary">Deposita</button>
+      </form>
+
+    </div>
 
     <!--end of body-->
     <script
